@@ -1,0 +1,72 @@
+$inactive-color: rgba(255, 255, 255, 0.7);
+$active-color: rgba(255, 255, 255, 1);
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+menu {
+    position: absolute;
+    right: 0rem;
+}
+
+.home-page-bg {
+    background-image: url("http://localhost:5500/assets/images/atlas-bg.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #179aa9;
+}
+
+.menu {
+
+    &-list {
+        list-style-type: none;
+        color: #fff;
+        font-size: 2.5rem;
+        font-family: 'Oswald', sans-serif;
+        line-height: 6.5rem;
+        padding-top: 3.5rem;
+    }
+
+    &-button {
+        width: 4rem;
+        height: 4rem;
+        position: fixed;
+        right: 0;  
+        color: $inactive-color;
+        padding-top: 1rem;
+
+        .material-icons {
+            font-size: 2.5rem;
+        }
+        
+        &-open {
+            display: none !important;
+        }
+
+        &-close {
+            display: block !important;
+        }
+    }
+
+
+}
+
+.side-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    padding: 0 3rem;
+    // display: none;    
+    a {
+        text-decoration: none;
+        color: $inactive-color;
+        
+        &:hover {
+            color: $active-color;
+            text-decoration: underline;
+        }
+    }
+}
